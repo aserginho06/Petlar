@@ -1,0 +1,217 @@
+/* Definição das variáveis de cores */
+:root {
+    --primary-color: #5BA3D0; /* Azul médio para botões e destaques */
+    --secondary-color: #E0F3FF; /* Azul claro para fundo suave */
+    --background-color: #FFFFFF; /* Branco */
+    --text-color: #333333; /* Cinza escuro para o texto */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Cabeçalho --- */
+header {
+    background-color: var(--background-color);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+}
+
+/* Estilos para os novos botões de autenticação no cabeçalho */
+.auth-buttons {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+}
+
+/* Botões do cabeçalho herdam o estilo de btn-primary e btn-secondary */
+
+/* --- Seção Hero (Início) --- */
+.hero {
+    background-color: var(--secondary-color); /* Azul claro */
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-actions a { /* Alterado de button para a */
+    margin: 0 10px;
+}
+
+/* --- Seções de Conteúdo --- */
+.section-content {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-content.primary-bg {
+    background-color: var(--primary-color); /* Azul médio para a seção de doação */
+    color: var(--background-color);
+}
+
+.section-content.primary-bg h3, .section-content.primary-bg p {
+    color: var(--background-color);
+}
+
+.section-content h3 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.section-content.primary-bg h3 {
+    color: var(--background-color);
+}
+
+.section-content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.callout {
+    font-style: italic;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.section-content.primary-bg .callout {
+    color: var(--background-color);
+    opacity: 0.8;
+}
+
+.pet-example {
+    margin-top: 40px;
+}
+
+/* --- Botões (A, para links e botões) --- */
+.btn-primary, .btn-secondary, .btn-call-to-action {
+    display: inline-block;
+    padding: 10px 20px; /* Reduzi um pouco o padding para o cabeçalho */
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s, border-color 0.3s;
+    font-size: 1em;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.btn-primary:hover {
+    background-color: #4a8fb9; /* Um tom um pouco mais escuro */
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transform: translateY(-1px);
+}
+
+/* Botões de Ação Principal */
+.hero-actions .btn-primary, .hero-actions .btn-secondary {
+    padding: 12px 25px; /* Devolve o padding maior para os botões principais */
+    font-size: 1.1em;
+}
+
+.btn-call-to-action {
+    font-size: 1.1em;
+}
+
+.btn-call-to-action.white-border {
+    background-color: transparent;
+    border: 2px solid var(--background-color);
+    color: var(--background-color);
+}
+
+.btn-call-to-action.white-border:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Mídia Query para Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .auth-buttons a {
+        flex: 1; /* Faz os botões dividirem o espaço */
+        text-align: center;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero-actions a { /* Alterado de button para a */
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
