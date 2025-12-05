@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet • PetLar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pet-adocao.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <button class="btn-ghost" onclick="history.back()">← Voltar</button>
+        <h2 class="logo">PetLar</h2>
+    </div>
+</header>
+
+<main class="pet-page">
+
+    <div class="pet-hero">
+        <img id="petPhoto" alt="Foto do Pet">
+    </div>
+
+    <section class="pet-info-card animate-pop">
+        <h1 id="petName"></h1>
+        <h3 id="petBreed" class="muted"></h3>
+
+        <div class="pet-tags">
+            <span id="petGender" class="tag"></span>
+            <span id="petAge" class="tag"></span>
+            <span id="petWeight" class="tag"></span>
+        </div>
+
+        <div class="pet-institution">
+            <div class="inst-left">
+                <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png">
+                <div>
+                    <h4 id="instName"></h4>
+                    <p id="instLocation"></p>
+                </div>
+            </div>
+            <button class="chat-btn">💬</button>
+        </div>
+
+        <p id="petBio" class="bio-text"></p>
+
+        <button id="interestBtn" class="btn-primary full">Estou interessado</button>
+    </section>
+
+</main>
+
+<!-- MODAIS AQUI -->
+<div id="modalArea"></div>
+
+<script src="js/app.js"></script>
+<script src="js/pet-adocao.js"></script>
+</body>
+</html>
