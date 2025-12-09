@@ -1,0 +1,71 @@
+/* CARD PRINCIPAL */
+.adoption-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+/* Hero */
+.pet-hero img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* Tags */
+.tag {
+    padding: 6px 12px;
+    background: #e7f3ff;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+/* Bio */
+.bio-text {
+    margin: 16px 0;
+    line-height: 1.5;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn .3s;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: none; }
+}

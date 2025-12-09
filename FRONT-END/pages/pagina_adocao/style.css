@@ -1,0 +1,216 @@
+/* --- Estilos Gerais e Reutilizados --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Card Principal --- */
+.adoption-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+/* --- Cabeçalho --- */
+.pet-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.pet-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #eaf2ff;
+    margin-bottom: 15px;
+}
+
+.pet-header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* --- Botões de Ação --- */
+.action-buttons button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #3498db;
+    background-color: #ffffff;
+    color: #3498db;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #3498db;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+.action-buttons button:last-child {
+    margin-bottom: 0;
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    color: #ffffff;
+}
+
+.action-buttons button:last-child:hover {
+    background-color: #27ae60;
+    border-color: #27ae60;
+}
+
+/* --- Estilos dos Modais (Pop-ups) --- */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border: none;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+/* --- Conteúdo Específico dos Modais --- */
+.modal-content h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-content form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.file-upload-area {
+    border: 2px dashed #3498db;
+    border-radius: 8px;
+    padding: 40px;
+    margin: 20px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-upload-area:hover {
+    background-color: #eaf2ff;
+}
+
+.file-upload-area label {
+    cursor: pointer;
+    color: #555;
+}
+
+.term-content {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.term-content ul {
+    padding-left: 20px;
+}
+
+.confirmation-checklist {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.confirmation-checklist p {
+    margin: 8px 0;
+}
+
+#final-confirm-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 600px) {
+    .modal-content {
+        margin: 5% auto;
+        width: 95%;
+        padding: 20px;
+    }
+}

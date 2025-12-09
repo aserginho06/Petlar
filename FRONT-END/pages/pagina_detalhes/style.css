@@ -1,0 +1,121 @@
+/* --- Estilos Gerais --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* --- Card Principal --- */
+.pet-details-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.pet-details-card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Container da Imagem --- */
+.image-container {
+    flex: 1;
+    min-width: 350px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Container das Informações --- */
+.info-container {
+    flex: 1.2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-container h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+}
+
+.pet-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.pet-info-list li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.pet-info-list li:last-child {
+    border-bottom: none;
+}
+
+.institution-info {
+    font-size: 0.95rem;
+    color: #555;
+    background-color: #eaf2ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.breed-description h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-top: 0;
+}
+
+.breed-description p {
+    line-height: 1.7;
+    color: #555;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        align-items: center;
+    }
+
+    .pet-details-card {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .image-container {
+        min-width: auto;
+        height: 300px;
+    }
+
+    .info-container {
+        padding: 25px;
+    }
+
+    .info-container h1 {
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adotar Bidu - Formulário de Solicitação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="adoption-card">
+        <header class="pet-header">
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=1887&auto=format&fit=crop" alt="Avatar do Bidu">
+            <h1>Adotar Bidu</h1>
+        </header>
+
+        <section class="action-buttons">
+            <button id="btn-form">1. Preencher Formulário</button>
+            <button id="btn-docs">2. Anexar Documentos</button>
+            <button id="btn-term">3. Assinar Termo de Responsabilidade</button>
+            <button id="btn-confirm">4. Confirmar Solicitação</button>
+        </section>
+    </main>
+
+    <!-- Modal Formulário -->
+    <div id="modal-form" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modal-form">&times;</span>
+            <h2>Formulário de Adoção</h2>
+            <p>Preencha suas informações para começar o processo.</p>
+            <form>
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="tel" placeholder="Telefone" required>
+                <textarea placeholder="Por que você quer adotar o Bidu?" rows="4"></textarea>
+                <button type="submit">Salvar Formulário</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Documentos -->
+    <div id="modal-docs" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modal-docs">&times;</span>
+            <h2>Anexar Documentos</h2>
+            <p>Por favor, anexe os documentos necessários (RG, Comprovante de Residência).</p>
+            <div class="file-upload-area">
+                <input type="file" id="file-input" multiple hidden>
+                <label for="file-input">Clique para selecionar ou arraste os arquivos aqui</label>
+            </div>
+            <button id="upload-btn">Enviar Arquivos</button>
+        </div>
+    </div>
+
+    <!-- Modal Termo de Responsabilidade -->
+    <div id="modal-term" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modal-term">&times;</span>
+            <h2>Termo de Responsabilidade</h2>
+            <div class="term-content">
+                <p>Ao assinar este termo, você se compromete a...</p>
+                <ul>
+                    <li>Oferecer um ambiente seguro e amoroso para o pet.</li>
+                    <li>Assumir a responsabilidade por sua saúde e bem-estar.</li>
+                    <li>Não abandoná-lo sob nenhuma circunstância.</li>
+                    <li>Prover alimentação adequada e cuidados veterinários.</li>
+                </ul>
+            </div>
+            <button id="sign-term-btn">Concordo e Assino</button>
+        </div>
+    </div>
+
+    <!-- Modal Confirmação -->
+    <div id="modal-confirm" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modal-confirm">&times;</span>
+            <h2>Confirmar Solicitação</h2>
+            <p>Revise suas informações e confirme o envio da solicitação de adoção para o Bidu.</p>
+            <div class="confirmation-checklist">
+                <p><input type="checkbox" id="check-info" checked> Formulário preenchido</p>
+                <p><input type="checkbox" id="check-docs" checked> Documentos anexados</p>
+                <p><input type="checkbox" id="check-term" checked> Termo assinado</p>
+            </div>
+            <button id="final-confirm-btn">Enviar Solicitação Final</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
