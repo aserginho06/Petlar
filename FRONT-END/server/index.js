@@ -6,13 +6,13 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000; // <-- OBRIGATÓRIO NO RENDER
 
 // middlewares
 app.use(cors());
 app.use(bodyParser.json());
 
-// carrega pets.json corretamente
+// carrega pets.json
 const pets = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'data', 'pets.json'), 'utf8')
 );
@@ -57,5 +57,5 @@ app.get('/pets', (req,res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`API rodando em http://localhost:${PORT}`);
+  console.log(`API rodando na porta ${PORT}`);
 });
